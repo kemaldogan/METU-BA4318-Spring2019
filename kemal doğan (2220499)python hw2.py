@@ -1,5 +1,3 @@
-from scipy.spatial import distance
- 
 print("hello, you will be asked to enter input coordinates") 
 input_number=int(input("First, please decide how many number you want to enter"))
 a=0
@@ -27,6 +25,7 @@ print("center of mass for given coordinates is",CoM)
 list_dist=[]
 for k in range(0,len(our_list)):
     a=our_list[k]
+    from scipy.spatial import distance
     dst = distance.euclidean(a, CoM)
     list_dist.append(dst)
 print("distance between each coordinate and center of mass respectly is:",list_dist)
